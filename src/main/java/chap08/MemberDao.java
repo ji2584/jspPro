@@ -66,6 +66,53 @@ public KicMember oneMember(String id) throws SQLException {
 	return null;
 }
 
+public int UpdateMember(KicMember kicmem) throws UnsupportedEncodingException, SQLException {
+    
+    Connection conn = getConnection();
+        String sql = "Update kicmember set name=?,gender=?,tel=?,email=? where id=?";
+       PreparedStatement pstmt = conn.prepareStatement(sql);
+       //mapping
+       pstmt.setString(1,kicmem.getName());
+       pstmt.setInt(2,kicmem.getGender());
+       pstmt.setString(3,kicmem.getTel());
+       pstmt.setString(4,kicmem.getEmail());
+       pstmt.setString(5,kicmem.getId());
+       //4)excute
+       int num = pstmt.executeUpdate();
+       return num;
+                
+ }
+
+public int DeleteMember(String login) throws UnsupportedEncodingException, SQLException {
+    
+    Connection conn = getConnection();
+        String sql = "delete kicmember where id = ?";
+       PreparedStatement pstmt = conn.prepareStatement(sql);
+       //mapping
+       pstmt.setString(1,login);
+       
+       //4)excute
+       int num = pstmt.executeUpdate();
+       return num;
+                
+ }
+
+public int PassMember(String id,String chgpass) throws UnsupportedEncodingException, SQLException {
+    
+    Connection conn = getConnection();
+        String sql = "update kicmember set pass=? where id=?" ;
+       PreparedStatement pstmt = conn.prepareStatement(sql);
+       //mapping
+       pstmt.setString(1,chgpass);
+       pstmt.setString(2, id);
+       
+       //4)excute
+       int num = pstmt.executeUpdate();
+       return num;
+                
+ }
+
+
 
 
 }// class end

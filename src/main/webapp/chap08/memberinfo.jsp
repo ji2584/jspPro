@@ -29,9 +29,9 @@ KicMember mem = md.oneMember(login);
         	<a class = "btn btn-primary"
         	href = "${pageContext.request.contextPath}/chap08/memberUpdateForm.jsp">회원정보수정</a>
            <a class = "btn btn-primary"
-        	href = "${pageContext.request.contextPath}/chap08/memberDelete.jsp">회원탈퇴</a>
+        	href = "${pageContext.request.contextPath}/chap08/memberDeleteForm.jsp">회원탈퇴</a>
         	<a class = "btn btn-primary"
-        	href = "${pageContext.request.contextPath}/chap08/memberPassUpdate.jsp">비밀번호수정</a>
+        	href = "${pageContext.request.contextPath}/chap08/memberPassForm.jsp">비밀번호수정</a>
            </td>
            </tr>
            

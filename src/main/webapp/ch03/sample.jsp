@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-sample =====> <%= msg %>
+sample =====> <%=  .3
+%>
 </body>
 </html>
