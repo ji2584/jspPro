@@ -19,7 +19,7 @@
   <ul class="navbar-nav">
 <%
 request.setCharacterEncoding("utf-8");
-String login = (String)session.getAttribute("id");
+String login = (String)session.getAttribute("id");   
 if(login==null){
 
 %>
